@@ -26,6 +26,9 @@ func split(sum int) (x, y int) {
 	return
 }
 
+// Variables
+// var c, python, java bool
+
 func main() {
 	fmt.Println("My favorite number is", rand.Intn(10))
 	fmt.Println(math.Pi);
@@ -33,5 +36,14 @@ func main() {
 	a, b := swap("hello", "world")
 	fmt.Println(a, b)
 	fmt.Println(split(17))
-}
+
+	var i, j int = 1, 2
+	var c, python, java = true, false, "no!"
+	fmt.Println(i, j, c, python, java)
+	fmt.Printf("c: %T, python: %T, java: %T\n", c, python, java)
+
+	// 関数の中では暗黙的な型宣言が使える
+	k := 3 // var 宣言の代わり
+	fmt.Println(i, j, k)
+}	
 
